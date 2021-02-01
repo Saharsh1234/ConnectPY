@@ -6,3 +6,7 @@ localip = 127.0.0.1
 
 ifudp = socket.socket(socket.AF_IFNET, socket.SOCK_DGRAM)
 ifupd.bind(("", 15000))
+
+while True:
+    data, addr = ifudp.recvfrom(4096)
+    print("recieved")
