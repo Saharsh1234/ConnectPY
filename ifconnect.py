@@ -27,7 +27,7 @@ ADDR = (UDP_IP, UDP_PORT)
 
 tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 tcp.connect(ADDR)
-print(f"Connected to {UDP_IP} on {UDP_PORT}")
+print(f'Connected to {UDP_IP} on {UDP_PORT}')
 
 # Send Commands to Infinite Flight
 
@@ -46,7 +46,6 @@ def command(cmd, param, await_response=False):
 # Input
 
 while(requests <= 2000):
-    print('A - ATC Window, F - Flaps Down, U - Flaps Up, G - Gear Down/Up, Q - Quit application ')
     if(keyboard.is_pressed('a') == True):
         command("Commands.ShowATCWindowCommand", [])
         time.sleep(1)
@@ -59,7 +58,20 @@ while(requests <= 2000):
     elif(keyboard.is_pressed('u') == True):
         command("commands.FlapsUp", [])
         time.sleep(1)
+    elif(keyboard.is_pressed('s') == True):
+        command("commands.spoilers", [])
+        time.sleep(1)
+    elif(keyboard.is_pressed('+') == True):
+        command("a+", [])
+        time.sleep(1)
+    elif(keyboard.is_pressed('3') == True):
+        command("commands.setflybycamera", [])
+        time.sleep(1)
+    elif(keyboard.is_pressed('1') == True):
+        command("commands.setcockpitcamera", [])
+        time.sleep(1)
+    elif(keyboard.is_pressed('l') == True):
+        command("commands.landinglights", [])
+        time.sleep(1)
     elif(keyboard.is_pressed('q') == True):
         quit()
-    else:
-        input1 = input('What would you like to do?')
