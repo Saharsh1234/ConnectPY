@@ -2,6 +2,10 @@ Use your keyboard to fly on IF!
 
 If you run into any issues, please DM @Saharsh on the IFC.
 
+Download Windows EXE from [I'm an inline-style link](https://drive.google.com/drive/folders/1dCJMGHVV3I2KlAXcwQyceASGHsAvd4x0?usp=sharing)
+
+To run on mac, download [this](https://drive.google.com/drive/folders/1LMtD6M-zXc3pr5jsMfhEVkyrCYRauJFs?usp=sharing). Open a terminal window and type in `sudo python3 ifconnect.py`, this should ask for your user password, don't worry, I don't store these passwords, this command runs it in admin. It will show a message that says `Connected on {IP} on port {PORT}`. Once you get this message, use your keyboard with the following commands below!
+
 Commands:
 Letter Commands:
 
