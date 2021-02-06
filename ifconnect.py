@@ -15,7 +15,6 @@ udp.bind(("", 15000))
 while True:
     data, addr = udp.recvfrom(4096)
     if data:
-        print(data)
         break
 udp.close()
 
@@ -41,37 +40,61 @@ def command(cmd, param, await_response=False):
         response = tcp.recv(10)
         return response
     else:
-        print("Request sent.")
+        return
 
 # Input
 
 while(requests <= 2000):
     if(keyboard.is_pressed('a') == True):
         command("Commands.ShowATCWindowCommand", [])
-        time.sleep(1)
+        time.sleep(0.50)
     elif(keyboard.is_pressed('f') == True):
         command("Commands.FlapsDown", [])
-        time.sleep(1)
+        time.sleep(0.50)
     elif(keyboard.is_pressed('g') == True):
         command("commands.landinggear",[])
-        time.sleep(1)
+        time.sleep(0.50)
     elif(keyboard.is_pressed('u') == True):
         command("commands.FlapsUp", [])
-        time.sleep(1)
+        time.sleep(0.50)
     elif(keyboard.is_pressed('s') == True):
         command("commands.spoilers", [])
-        time.sleep(1)
+        time.sleep(0.50)
     elif(keyboard.is_pressed('+') == True):
         command("a+", [])
-        time.sleep(1)
+        time.sleep(0.50)
     elif(keyboard.is_pressed('3') == True):
         command("commands.setflybycamera", [])
-        time.sleep(1)
+        time.sleep(0.50)
     elif(keyboard.is_pressed('1') == True):
         command("commands.setcockpitcamera", [])
-        time.sleep(1)
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('2') == True):
+        command("commands.setvirtualcockpitcameracommand", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('4') == True):
+        command("commands.setfollowcameracommand", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('5') == True):
+        command("commands.settowercameracommand", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('p') == True):
+        command("Commands.TogglePause", [])
+        time.sleep(0.50)
     elif(keyboard.is_pressed('l') == True):
         command("commands.landinglights", [])
-        time.sleep(1)
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('b') == True):
+        command("commands.beaconlights", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('n') == True):
+        command("commands.navlights", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('[') == True):
+        command("commands.elevatortrimup", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed(']') == True):
+        command("commands.elevatortrimdown", [])
+        time.sleep(0.50)
     elif(keyboard.is_pressed('q') == True):
         quit()
