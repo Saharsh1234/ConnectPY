@@ -45,7 +45,7 @@ def command(cmd, param, await_response=False):
 # Input
 
 while(requests <= 2000):
-    if(keyboard.is_pressed('a') == True):
+    if(keyboard.is_pressed('c') == True):
         command("Commands.ShowATCWindowCommand", [])
         time.sleep(0.50)
     elif(keyboard.is_pressed('f') == True):
@@ -57,11 +57,8 @@ while(requests <= 2000):
     elif(keyboard.is_pressed('u') == True):
         command("commands.FlapsUp", [])
         time.sleep(0.50)
-    elif(keyboard.is_pressed('s') == True):
+    elif(keyboard.is_pressed('z') == True):
         command("commands.spoilers", [])
-        time.sleep(0.50)
-    elif(keyboard.is_pressed('+') == True):
-        command("a+", [])
         time.sleep(0.50)
     elif(keyboard.is_pressed('3') == True):
         command("commands.setflybycamera", [])
@@ -90,11 +87,32 @@ while(requests <= 2000):
     elif(keyboard.is_pressed('n') == True):
         command("commands.navlights", [])
         time.sleep(0.50)
+    elif(keyboard.is_pressed('m')):
+        command("commands.strobelights", [])
+        time.sleep(0.50)
     elif(keyboard.is_pressed('[') == True):
         command("commands.elevatortrimup", [])
         time.sleep(0.50)
     elif(keyboard.is_pressed(']') == True):
         command("commands.elevatortrimdown", [])
         time.sleep(0.50)
-    elif(keyboard.is_pressed('q') == True):
+    elif(keyboard.is_pressed('w') == True):
+        command("commands.throttleupcommand", [])
+        time.sleep(0.05)
+    elif(keyboard.is_pressed('s') == True):
+        command("commands.throttledowncommand", [])
+        time.sleep(0.05)
+    elif(keyboard.is_pressed('r') == True):
+        command("commands.reversethrust", [])
+        time.sleep(0.05)
+    elif(keyboard.is_pressed('a') == True):
+        command("commands.autopilot.toggle", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('space') == True):
+        command("commands.parkingbrakes", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('h') == True):
+        command("commands.togglehud", [])
+        time.sleep(0.50)
+    elif(keyboard.is_pressed('esc') == True):
         quit()
