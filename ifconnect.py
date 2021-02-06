@@ -60,7 +60,7 @@ while(requests <= 2000):
     elif(keyboard.is_pressed('z') == True):
         command("commands.spoilers", [])
         time.sleep(0.50)
-    elif(keyboard.is_pressed('3') == True):
+    elif(keyboard.is_pressed('4') == True):
         command("commands.setflybycamera", [])
         time.sleep(0.50)
     elif(keyboard.is_pressed('1') == True):
@@ -69,7 +69,7 @@ while(requests <= 2000):
     elif(keyboard.is_pressed('2') == True):
         command("commands.setvirtualcockpitcameracommand", [])
         time.sleep(0.50)
-    elif(keyboard.is_pressed('4') == True):
+    elif(keyboard.is_pressed('3') == True):
         command("commands.setfollowcameracommand", [])
         time.sleep(0.50)
     elif(keyboard.is_pressed('5') == True):
