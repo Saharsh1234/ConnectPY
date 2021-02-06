@@ -102,9 +102,6 @@ while(requests <= 2000):
     elif(keyboard.is_pressed('s') == True):
         command("commands.throttledowncommand", [])
         time.sleep(0.05)
-    elif(keyboard.is_pressed('r') == True):
-        command("commands.reversethrust", [])
-        time.sleep(0.05)
     elif(keyboard.is_pressed('a') == True):
         command("commands.autopilot.toggle", [])
         time.sleep(0.50)
